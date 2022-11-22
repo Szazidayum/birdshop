@@ -14,7 +14,7 @@ class MadarModell{
         })
             .then((response) => response.json())
             .then((data) => {
-                this.#madarakTomb = data.madar;
+                this.#madarakTomb = data;
                 myCallBack(this.#madarakTomb);
             })
             .catch((error) => {

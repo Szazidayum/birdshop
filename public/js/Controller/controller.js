@@ -6,7 +6,7 @@ class MadarController{
     constructor() {
         const token = $('meta[name="csrf-token"]').attr("content");
         const madarModell = new MadarModell(token);
-        madarModell.adatBe("../adat.json", this.madarAdatok);
+        madarModell.adatBe("/birds", this.madarAdatok);
         $(window).on("dbValtozik",()=>{
             this.madarAdatok(madarModell.getTomb());
         });
